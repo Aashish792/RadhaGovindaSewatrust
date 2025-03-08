@@ -89,7 +89,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 185%;
   object-fit: cover;
   z-index: -1;
 }
@@ -273,7 +273,7 @@ body {
 /* Contact Section */
 .contact {
   background: linear-gradient(135deg, #033080, #0441a4, #022060);
-  color: white;
+  
   padding: 60px 0;
   text-align: center;
 }
@@ -530,6 +530,75 @@ footer {
   width: 18px;
 }
 
+.hero-content.fade-in {
+  color: #f0f71c; /* Dark text */
+  /* Remove any text-shadow that might affect readability on a light background */
+  text-shadow: none;
+}
+
+.footer-icon {
+  width: 24px;
+  height: 24px;
+  margin: 0 5px;
+  transition: transform 0.3s ease;
+}
+
+.footer-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Flex container for the contact section */
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* Adjust gap between content and image */
+}
+
+/* Ensure contact content takes available space */
+.contact-content {
+  flex: 1;
+}
+
+/* Style for the side image container */
+.contact-image {
+  flex: 0 0 auto;
+  /* Optional: set a max-width if needed */
+  max-width: 300px;
+}
+
+/* Ensure the image scales responsively */
+.contact-image img {
+  width: 100%;
+  height: auto;
+}
+
+/* Maintain your existing contact styles if any */
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+.contact ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
+}
 
 /* HAMBURGER MENU */
 .hamburger {
@@ -545,6 +614,57 @@ footer {
   margin: 5px 0;
   transition: all 0.3s ease;
 }
+
+/* Container styling to use flex layout */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* optional spacing between sections */
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+}
+
+/* Left image section */
+.contact-left-image {
+  flex: 1; /* Adjusts the width relative to other sections */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the left image (if not already inline) */
+.contact-left-image img {
+  max-width: 80%; /* This makes it a bit smaller than the other images */
+  height: auto;
+}
+
+/* Contact content styling */
+.contact-content {
+  flex: 2; /* Gives more space for the main content */
+  text-align: center;
+}
+
+/* Right image section */
+.contact-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optional: Ensure images in the right section fit nicely */
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments (if needed) */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
 
 /* Mobile View */
 @media (max-width: 768px) {
@@ -568,4 +688,6 @@ footer {
   .hamburger {
     display: flex;
   }
+
+  
 }
