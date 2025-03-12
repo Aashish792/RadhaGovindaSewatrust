@@ -689,5 +689,9 @@ footer {
     display: flex;
   }
 
-  
+  .hero-img {
+    width: 100%;   /* Fixed width */
+    height: 100%;   /* Maintain aspect ratio */
+  }
+
 }
